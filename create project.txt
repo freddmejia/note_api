@@ -1,0 +1,8 @@
+create project
+composer create-project laravel/laravel:8.6.11 name_project --prefer-dist
+install graphql -> tutorial: https://dev.to/joselfonseca/graphql-auth-with-passport-and-lighthouse-php-14g5 
+composer require nuwave/lighthouse laravel/passport joselfonseca/lighthouse-graphql-passport-auth --with-all-dependencies
+
+
+php artisan vendor:publish --tag=lighthouse-schema
+php artisan vendor:publish --tag=lighthouse-config
