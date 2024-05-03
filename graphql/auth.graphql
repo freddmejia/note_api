@@ -94,7 +94,6 @@ input NoteInput {
 
 input NoteUpdateInput {
     id: ID!
-    user_id: Int!
     note: String!
     status: String!
 }

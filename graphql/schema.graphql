@@ -16,6 +16,9 @@ type Query {
     ): [User!]! @paginate(defaultCount: 10)
 
   notes_by_id_user(user_id: ID! @eq status: String! @eq orderBy: _  @orderBy(columns:["created_at"])): [Note!]! @guard @paginate(defaultCount: 5)
+
+  note_by_id(id: ID! @eq status: String! @eq): Note! @find
+
 }
 
 
@@ -31,7 +34,7 @@ extend type Mutation {
     updatePassword(input: UpdatePassword! @spread): UpdatePasswordResponse! @field(resolver: "Joselfonseca\\LighthouseGraphQLPassport\\GraphQL\\Mutations\\UpdatePassword@resolve") @guard(with: ["api"])
 
     registerNote(input: NoteInput @spread): Note @create
-
+    updateNote(input: NoteUpdateInput @spread): Note @update
 
 }
 
