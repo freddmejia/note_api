@@ -99,12 +99,14 @@ input UpdatePassword {
 
 input NoteInput {
     user_id: Int!
+    title: String!
     note: String!
     status: String!
 }
 
 input NoteUpdateInput {
     id: ID!
+    title: String!
     note: String!
     status: String!
 }

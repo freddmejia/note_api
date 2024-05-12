@@ -53,6 +53,7 @@ type User {
 type Note {
     id: ID!
     user: User! @belongsTo
+    title: String!
     note: String!
     status: String!
     created_at: DateTime!
