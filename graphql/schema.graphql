@@ -15,7 +15,7 @@ type Query {
       name: String @where(operator: "like")
     ): [User!]! @paginate(defaultCount: 10)
 
-  notes_by_id_user(user_id: ID! @eq status: String! @eq orderBy: _  @orderBy(columns:["created_at"])): [Note!]! @guard @paginate(defaultCount: 5)
+  notes_by_id_user(user_id: ID! @eq status: String! @eq orderBy: _  @orderBy(columns:["created_at"])): [Note!]! @guard @paginate(defaultCount: 200)
 
   note_by_id(id: ID! @eq status: String! @eq): Note! @find
 
