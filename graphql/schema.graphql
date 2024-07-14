@@ -38,6 +38,8 @@ extend type Mutation {
 
   forgotPasswordUser(input: ForgotPasswordInput! @spread): ForgotPasswordResponse! @field(resolver: "App\\Http\\Controllers\\ForgoPasswordResolver@checkUserEmail")
   updatePasswordUser(input: NewPasswordWithCodInput! @spread): NewPasswordWithCodResponse! @field(resolver: "App\\Http\\Controllers\\UpdatePasswordResolver@updatePasswordUser")
+  updatedUser(input: UpdateUserInput! @spread): NewPasswordWithCodResponse! @field(resolver: "App\\Http\\Controllers\\UpdateUserResolver@updateUserResolver")
+
 }
 
 

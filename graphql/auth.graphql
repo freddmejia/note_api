@@ -75,6 +75,13 @@ input NewPasswordWithCodInput {
     password_confirmation: String!
 }
 
+input UpdateUserInput {
+    id: Int!
+    name: String! @rules(apply: ["required", "string"])
+    password: String!
+    password_confirmation: String!
+}
+
 input RegisterInput {
     name: String! @rules(apply: ["required", "string"])
     email: String! @rules(apply: ["required", "email", "unique:users,email"])
