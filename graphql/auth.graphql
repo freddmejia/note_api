@@ -109,6 +109,7 @@ input NoteInput {
     title: String!
     note: String!
     status: String!
+    created_at: String!
 }
 
 input NoteUpdateInput {
@@ -116,4 +117,5 @@ input NoteUpdateInput {
     title: String!
     note: String!
     status: String!
+    created_at: String!
 }
